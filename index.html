@@ -1,0 +1,49 @@
+<DOCTYPE html>
+    
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Typer Text</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>    
+    
+<body>
+    
+    <div class="container">
+        <center>
+        <h1 class="h1">Typer Text | Contador</h1>
+        </center>
+        <div class="mensagemAleatoria">
+            <p>Digite uma frase para contar os caracteres
+            <br><a href="#myModal" data-toggle="modal">créditos</a></p>
+            <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Créditos</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Por <a href="https://github.com/wiliamvj">Wiliam Joaquim</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <labe>Digite seu texto ou frase:</labe>
+            <textarea id="selecionaTexto" class="form-control" rows="5" placeholder="Digite uma frase bacana..." onfocus="this.value;" method="post"></textarea>
+            <button id="botaoSeleciona" class="btn btn-primary" onclick="adicionaTexto()">Contar</button>
+            <label id="msgErro"> Ops! digite algo!</label>
+            <button id="botaoRemoveFrase" class="btn btn-secundary" onclick="adicionaTexto()">Limpar</button>
+        </div>
+        <div id="frases" class="container-fluid">
+            <!-- aqui vai ser adicionado a frase com tag <label> no DOM via JavaScript -->
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
